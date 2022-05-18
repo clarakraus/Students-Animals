@@ -6,8 +6,16 @@ public class StringChecker {
         System.out.println(checkString("Hallo ziemlich langer fancy String"));
     }
 
-    private static boolean checkString(String s) {
-        return s.length() > 20 && s.contains("fancy");
+    public static boolean checkString(String s) {
+        return determineStringLength(s) && checkIfFancy(s);
+    }
+
+    private static boolean checkIfFancy(String s) {
+        return s.contains("fancy");
+    }
+
+    private static boolean determineStringLength(String s) {
+        return s.length() > 20;
     }
 
 }
