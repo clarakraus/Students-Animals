@@ -13,8 +13,7 @@ class AlarmTest {
 
         Assertions.assertEquals("Zu viele Personen", actual);
     }
-
-
+    
     @Test
     void shouldBeValid() {
         int numberOfCustomers = 30;
