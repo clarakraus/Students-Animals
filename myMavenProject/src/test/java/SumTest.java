@@ -5,32 +5,32 @@ import static org.junit.jupiter.api.Assertions.*;
 class SumTest {
 
     @Test
-    void testSumIterative_0() {
+    void testSumIterative_emptyArray() {
         assertEquals(0, Sum.sumIterative(new int[]{}));
     }
 
     @Test
-    void testSumIterative_1() {
+    void testSumIterative_oneElement() {
         assertEquals(1, Sum.sumIterative(new int[]{1}));
     }
 
     @Test
-    void testSumIterative_2() {
+    void testSumIterative_multipleElements() {
         assertEquals(6, Sum.sumIterative(new int[]{1, 2, 3}));
     }
 
     @Test
-    void testSumRecursive_0() {
+    void testSumRecursive_emptyArray() {
         assertEquals(0, Sum.sumRecursive(new int[]{}));
     }
 
     @Test
-    void testSumRecursive_1() {
+    void testSumRecursive_oneElement() {
         assertEquals(1, Sum.sumRecursive(new int[]{1}));
     }
 
     @Test
-    void testSumRecursive_2() {
+    void testSumRecursive_multipleElements() {
         assertEquals(6, Sum.sumRecursive(new int[]{1, 2, 3}));
     }
 
