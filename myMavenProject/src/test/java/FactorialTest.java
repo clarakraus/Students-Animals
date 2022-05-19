@@ -44,4 +44,24 @@ class FactorialTest {
         assertEquals(6, Factorial.factorialWhile(3));
     }
 
+    @Test
+    void testFacRecursive_0() {
+        assertEquals(1, Factorial.factorialRecursive(0));
+    }
+
+    @Test
+    void testFacRecursive_1() {
+        assertEquals(1, Factorial.factorialRecursive(1));
+    }
+
+    @Test
+    void testFacRecursive_2() {
+        assertEquals(2, Factorial.factorialRecursive(2));
+    }
+
+    @Test
+    void testFacRecursive_3() {
+        assertEquals(6, Factorial.factorialRecursive(3));
+    }
+
 }
