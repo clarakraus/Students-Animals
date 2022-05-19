@@ -8,4 +8,13 @@ public class Factorial {
         return result;
     }
 
+    public static int factorialWhile(int n) {
+        int result = 1;
+        while (n > 0) {
+            result *= n;
+            --n;
+        }
+        return result;
+    }
+
 }
