@@ -19,8 +19,9 @@ public class Sum {
         if (start == end - 1) {
             return numbers[start];
         }
-        return sumRecursiveInternal(numbers, start, start + (end - start) / 2)
-                + sumRecursiveInternal(numbers, start + ((end - start) / 2), end);
+
+        int middle = start + (end - start) / 2;
+        return sumRecursiveInternal(numbers, start, middle) + sumRecursiveInternal(numbers, middle, end);
     }
 
 }
