@@ -1,3 +1,5 @@
+package week1;
+
 public class Fibonacci {
 
     public static int fibRecursive(int n) {

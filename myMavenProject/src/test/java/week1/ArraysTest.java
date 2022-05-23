@@ -1,4 +1,7 @@
+package week1;
+
 import org.junit.jupiter.api.Test;
+import week1.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -18,7 +21,7 @@ class ArraysTest {
 
     @Test
     void shouldCreateMultipleStudents() {
-        String[] expected = {"Student 1", "Student 2", "Student 3"};
+        String[] expected = {"week2.sub.Student 1", "week2.sub.Student 2", "week2.sub.Student 3"};
         assertArrayEquals(expected, Arrays.createStudents(3));
     }
 

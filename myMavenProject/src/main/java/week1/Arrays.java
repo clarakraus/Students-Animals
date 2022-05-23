@@ -1,3 +1,5 @@
+package week1;
+
 public class Arrays {
 
     public static String[] createStudents(int length) {
@@ -7,7 +9,7 @@ public class Arrays {
 
         String[] students = new String[length];
         for (int i = 0; i < students.length; i++) {
-            students[i] = "Student " + (i + 1);
+            students[i] = "week2.sub.Student " + (i + 1);
         }
         return students;
     }

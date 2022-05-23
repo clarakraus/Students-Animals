@@ -1,3 +1,5 @@
+package week1;
+
 public class Factorial {
 
     public static int factorialFor(int n) {

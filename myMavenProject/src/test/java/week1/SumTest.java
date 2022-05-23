@@ -1,4 +1,7 @@
+package week1;
+
 import org.junit.jupiter.api.Test;
+import week1.Sum;
 
 import static org.junit.jupiter.api.Assertions.*;
 

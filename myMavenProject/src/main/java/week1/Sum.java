@@ -1,3 +1,5 @@
+package week1;
+
 public class Sum {
 
     public static int sumIterative(int[] numbers) {

@@ -1,3 +1,5 @@
+package week1;
+
 public class StringChecker {
 
     public static boolean checkString(String s) {
