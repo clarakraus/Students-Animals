@@ -16,8 +16,6 @@ class StudentDBTest {
 
         // then
         Assertions.assertArrayEquals(students, actual);
-
-        Assertions.assertEquals("André Schreck", actual[0].getName());
     }
 
     @Test
@@ -57,8 +55,9 @@ class StudentDBTest {
         Student[] actual = studentDB.list();
 
         // then
-        Student[] expected = { new Student("André Schreck"), new Student("Thomas Kittlaus") };
-        Assertions.assertArrayEquals(expected, actual);
+        Assertions.assertEquals(2, actual.length);
+        Assertions.assertEquals("André Schreck", actual[0].getName());
+        Assertions.assertEquals("Thomas Kittlaus", actual[1].getName());
     }
 
     @Test
@@ -72,8 +71,8 @@ class StudentDBTest {
         Student[] actual = studentDB.list();
 
         // then
-        Student[] expected = { new Student("Thomas Kittlaus") };
-        Assertions.assertArrayEquals(expected, actual);
+        Assertions.assertEquals(1, actual.length);
+        Assertions.assertEquals("Thomas Kittlaus", actual[0].getName());
     }
 
     @Test
@@ -87,8 +86,9 @@ class StudentDBTest {
         Student[] actual = studentDB.list();
 
         // then
-        Student[] expected = { new Student("André Schreck") };
-        Assertions.assertArrayEquals(expected, actual);
+        // then
+        Assertions.assertEquals(1, actual.length);
+        Assertions.assertEquals("André Schreck", actual[0].getName());
     }
 
     @Test
@@ -102,8 +102,9 @@ class StudentDBTest {
         Student[] actual = studentDB.list();
 
         // then
-        Student[] expected = { new Student("André Schreck"), new Student("Thomas Kittlaus") };
-        Assertions.assertArrayEquals(expected, actual);
+        Assertions.assertEquals(2, actual.length);
+        Assertions.assertEquals("André Schreck", actual[0].getName());
+        Assertions.assertEquals("Thomas Kittlaus", actual[1].getName());
     }
 
 }
