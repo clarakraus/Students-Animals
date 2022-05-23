@@ -3,6 +3,8 @@ package week2.randomstudent;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class StudentDBTest {
 
     @Test
@@ -41,7 +43,7 @@ class StudentDBTest {
         String actual = studentDB.toString();
 
         // then
-        Assertions.assertEquals("[{name: André Schreck}, {name: Thomas Kittlaus}]", actual);
+        assertEquals("[{name: André Schreck}, {name: Thomas Kittlaus}]", actual);
     }
 
     @Test
@@ -55,9 +57,9 @@ class StudentDBTest {
         Student[] actual = studentDB.list();
 
         // then
-        Assertions.assertEquals(2, actual.length);
-        Assertions.assertEquals("André Schreck", actual[0].getName());
-        Assertions.assertEquals("Thomas Kittlaus", actual[1].getName());
+        assertEquals(2, actual.length);
+        assertEquals("André Schreck", actual[0].getName());
+        assertEquals("Thomas Kittlaus", actual[1].getName());
     }
 
     @Test
@@ -71,8 +73,8 @@ class StudentDBTest {
         Student[] actual = studentDB.list();
 
         // then
-        Assertions.assertEquals(1, actual.length);
-        Assertions.assertEquals("Thomas Kittlaus", actual[0].getName());
+        assertEquals(1, actual.length);
+        assertEquals("Thomas Kittlaus", actual[0].getName());
     }
 
     @Test
@@ -87,8 +89,8 @@ class StudentDBTest {
 
         // then
         // then
-        Assertions.assertEquals(1, actual.length);
-        Assertions.assertEquals("André Schreck", actual[0].getName());
+        assertEquals(1, actual.length);
+        assertEquals("André Schreck", actual[0].getName());
     }
 
     @Test
@@ -102,9 +104,9 @@ class StudentDBTest {
         Student[] actual = studentDB.list();
 
         // then
-        Assertions.assertEquals(2, actual.length);
-        Assertions.assertEquals("André Schreck", actual[0].getName());
-        Assertions.assertEquals("Thomas Kittlaus", actual[1].getName());
+        assertEquals(2, actual.length);
+        assertEquals("André Schreck", actual[0].getName());
+        assertEquals("Thomas Kittlaus", actual[1].getName());
     }
 
 }
