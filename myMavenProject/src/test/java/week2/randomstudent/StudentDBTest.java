@@ -69,7 +69,7 @@ class StudentDBTest {
         StudentDB studentDB = new StudentDB(students);
 
         // when
-        studentDB.remove(0);
+        studentDB.removeByIndex(0);
         Student[] actual = studentDB.list();
 
         // then
@@ -84,7 +84,7 @@ class StudentDBTest {
         StudentDB studentDB = new StudentDB(students);
 
         // when
-        studentDB.remove(1);
+        studentDB.removeByIndex(1);
         Student[] actual = studentDB.list();
 
         // then
@@ -100,7 +100,23 @@ class StudentDBTest {
         StudentDB studentDB = new StudentDB(students);
 
         // when
-        studentDB.remove(1);
+        studentDB.removeByIndex(1);
+        Student[] actual = studentDB.list();
+
+        // then
+        assertEquals(2, actual.length);
+        assertEquals("André Schreck", actual[0].getName());
+        assertEquals("Thomas Kittlaus", actual[1].getName());
+    }
+
+    @Test
+    void shouldRemoveIntermediateStudentById() {
+        // given
+        Student[] students = { new Student("André Schreck"), new Student("Max Mustermann"), new Student("Thomas Kittlaus") };
+        StudentDB studentDB = new StudentDB(students);
+
+        // when
+        studentDB.removeById(students[1].getId());
         Student[] actual = studentDB.list();
 
         // then

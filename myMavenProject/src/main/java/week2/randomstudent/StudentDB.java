@@ -31,10 +31,26 @@ public class StudentDB {
         this.students = newStudents;
     }
 
-    public void remove(int index) {
+    public void removeByIndex(int index) {
         Student[] newStudents = Arrays.copyOf(students, students.length - 1);
         System.arraycopy(students, 0, newStudents, 0, index);
         System.arraycopy(students, index + 1, newStudents, index, students.length - (index + 1));
         this.students = newStudents;
+    }
+
+    public void removeById(String id) {
+        int index = findIndex(id);
+        if (index >= 0) {
+            removeByIndex(index);
+        }
+    }
+
+    private int findIndex(String id) {
+        for (int i = 0; i < students.length; i++) {
+            if (students[i].getId().equals(id)) {
+                return i;
+            }
+        }
+        return -1;
     }
 }
