@@ -72,4 +72,59 @@ class StudentDBTest {
 
     }
 
+    @Test
+    void shouldRemoveFirstStudentFromDB(){
+        //GIVEN
+        Student student1 = new Student("Nicolai");
+        Student student2 = new Student("Christoph");
+        Student student3 = new Student("Erik");
+        String removeId = student1.getId();
+        Student[] myTestStudents ={student1,student2,student3};
+        StudentDB testDb = new StudentDB(myTestStudents);
+        //WHEN
+        testDb.remove(removeId);
+        Student[] actual = testDb.list();
+        //THEN
+        assertEquals(2,actual.length);
+        assertNotEquals("Nicolai", actual[0].getName());
+        assertNotEquals("Nicolai", actual[1].getName());
+
+    }
+
+    @Test
+    void shouldRemoveLastStudentFromDB(){
+        //GIVEN
+        Student student1 = new Student("Nicolai");
+        Student student2 = new Student("Christoph");
+        Student student3 = new Student("Erik");
+        String removeId = student3.getId();
+        Student[] myTestStudents ={student1,student2,student3};
+        StudentDB testDb = new StudentDB(myTestStudents);
+        //WHEN
+        testDb.remove(removeId);
+        Student[] actual = testDb.list();
+        //THEN
+        assertEquals(2,actual.length);
+        assertNotEquals("Erik", actual[0].getName());
+        assertNotEquals("Erik", actual[1].getName());
+
+    }
+
+    @Test
+    void shouldNotRemoveStudentWithUnknownId(){
+        //GIVEN
+        Student student1 = new Student("Nicolai");
+        Student student2 = new Student("Christoph");
+        Student student3 = new Student("Erik");
+        String removeId = "unknown";
+        Student[] myTestStudents ={student1,student2,student3};
+        StudentDB testDb = new StudentDB(myTestStudents);
+        //WHEN
+        testDb.remove(removeId);
+        Student[] actual = testDb.list();
+        //THEN
+        assertEquals(3,actual.length);
+
+    }
+
 }
