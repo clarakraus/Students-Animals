@@ -10,8 +10,8 @@ class StudentDBTest {
     @Test
     void shouldReturnAllStudentsWithList(){
         //GIVEN
-        Student student1 = new Student("Nicolai");
-        Student student2 = new Student("Christoph");
+        Student student1 = new HistoryStudent("Nicolai");
+        Student student2 = new ComputerScienceStudent("Christoph");
         Student[] myTestStudents ={student1,student2};
         StudentDB testDb = new StudentDB(myTestStudents);
         //WHEN
@@ -23,8 +23,8 @@ class StudentDBTest {
     @Test
     void shouldReturnString(){
         //GIVEN
-        Student student1 = new Student("Nicolai");
-        Student student2 = new Student("Christoph");
+        Student student1 = new HistoryStudent("Nicolai");
+        Student student2 = new ComputerScienceStudent("Christoph");
         String stu1id = student1.getId();
         String stu2id = student2.getId();
         Student[] myTestStudents ={student1,student2};
@@ -39,9 +39,9 @@ class StudentDBTest {
     @Test
     void shouldAddNewStudentToDB(){
         //GIVEN
-        Student student1 = new Student("Nicolai");
-        Student student2 = new Student("Christoph");
-        Student student3 = new Student("Erik");
+        Student student1 = new HistoryStudent("Nicolai");
+        Student student2 = new ComputerScienceStudent("Christoph");
+        Student student3 = new HistoryStudent("Erik");
         Student[] myTestStudents ={student1,student2};
         StudentDB testDb = new StudentDB(myTestStudents);
         //WHEN
@@ -56,9 +56,9 @@ class StudentDBTest {
     @Test
     void shouldRemoveStudentFromDB(){
         //GIVEN
-        Student student1 = new Student("Nicolai");
-        Student student2 = new Student("Christoph");
-        Student student3 = new Student("Erik");
+        Student student1 = new HistoryStudent("Nicolai");
+        Student student2 = new ComputerScienceStudent("Christoph");
+        Student student3 = new HistoryStudent("Erik");
         String removeId = student2.getId();
         Student[] myTestStudents ={student1,student2,student3};
         StudentDB testDb = new StudentDB(myTestStudents);
@@ -75,9 +75,9 @@ class StudentDBTest {
     @Test
     void shouldRemoveFirstStudentFromDB(){
         //GIVEN
-        Student student1 = new Student("Nicolai");
-        Student student2 = new Student("Christoph");
-        Student student3 = new Student("Erik");
+        Student student1 = new HistoryStudent("Nicolai");
+        Student student2 = new ComputerScienceStudent("Christoph");
+        Student student3 = new HistoryStudent("Erik");
         String removeId = student1.getId();
         Student[] myTestStudents ={student1,student2,student3};
         StudentDB testDb = new StudentDB(myTestStudents);
@@ -94,9 +94,9 @@ class StudentDBTest {
     @Test
     void shouldRemoveLastStudentFromDB(){
         //GIVEN
-        Student student1 = new Student("Nicolai");
-        Student student2 = new Student("Christoph");
-        Student student3 = new Student("Erik");
+        Student student1 = new HistoryStudent("Nicolai");
+        Student student2 = new ComputerScienceStudent("Christoph");
+        Student student3 = new HistoryStudent("Erik");
         String removeId = student3.getId();
         Student[] myTestStudents ={student1,student2,student3};
         StudentDB testDb = new StudentDB(myTestStudents);
@@ -113,9 +113,9 @@ class StudentDBTest {
     @Test
     void shouldNotRemoveStudentWithUnknownId(){
         //GIVEN
-        Student student1 = new Student("Nicolai");
-        Student student2 = new Student("Christoph");
-        Student student3 = new Student("Erik");
+        Student student1 = new HistoryStudent("Nicolai");
+        Student student2 = new ComputerScienceStudent("Christoph");
+        Student student3 = new HistoryStudent("Erik");
         String removeId = "unknown";
         Student[] myTestStudents ={student1,student2,student3};
         StudentDB testDb = new StudentDB(myTestStudents);
