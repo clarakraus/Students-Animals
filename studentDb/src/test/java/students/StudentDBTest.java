@@ -1,13 +1,16 @@
-package students;
+//package students;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-class StudentDBTest {
+//class StudentDBTest {
 
 
-    @Test
+  /*  @Test
     void shouldReturnAllStudentsWithList(){
         //GIVEN
         Student student1 = new HistoryStudent("Nicolai");
@@ -125,6 +128,19 @@ class StudentDBTest {
         //THEN
         assertEquals(3,actual.length);
 
+    } */
+   /* @Test
+
+    void shouldReturnRunTimeException(){
+
+        Student student1 = new HistoryStudent("Karl");
+        List<Student> testList = new ArrayList<>(List.of(student1));
+        StudentDB testDB = new StudentDB(testList);
+        try{
+            testDB.add(student1);
+            fail();
+        }catch (RuntimeException e){
+        }
     }
 
-}
+} */

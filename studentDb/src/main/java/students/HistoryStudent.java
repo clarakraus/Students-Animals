@@ -21,7 +21,7 @@ Lasse zwei konkrete Klassen das Student-Interface implementieren (z.B. Informati
 Füge eine Methode zu Student hinzu, die von den zwei implementierenden Klassen verschieden implementiert werden.
 * */
 
-import java.util.UUID;
+/* import java.util.UUID;
 
 public class HistoryStudent extends Student {
 
@@ -31,7 +31,8 @@ public class HistoryStudent extends Student {
     }
 
     @Override
-    public String examinate() {
+    public String subject() {
         return "History Assay";
     }
 }
+*/

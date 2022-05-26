@@ -1,61 +1,46 @@
 package students;
 
-import java.util.Arrays;
+import java.util.*;
 
-public class StudentDB {
+/*public class StudentDB {
 
-    private Student[] allMyStudents;
+    private Map<String, Student> allMyStudents = new HashMap<>();
 
-    public StudentDB(Student[] allMyStudents) {
-        this.allMyStudents = allMyStudents;
+    public StudentDB(List<Student> allMyStudents) {
+        for (int i = 0; i < allMyStudents.size(); i++) {
+            this.allMyStudents.put(allMyStudents.get(i).getId(), allMyStudents.get(i));
+
+
+        }
     }
 
-    public Student[] list(){
-        return allMyStudents;
+    public Collection<Student> list(){
+        return allMyStudents.values();
     }
 
-    public Student random(){
-        int randomIndex = (int) (Math.random()*allMyStudents.length);
+   /* public Student random(){
+        int randomIndex = (int) (Math.random()*allMyStudents.size());
         return allMyStudents[randomIndex];
-    }
+        }
 
-    @Override
+    */
+
+ /*   @Override
     public String toString() {
-        return "Unsere Schüler: " + Arrays.toString(allMyStudents);
+        return "Unsere Schüler: " + allMyStudents.toString();
     }
 
     public void add(Student studentToAdd) {
-        Student[] studArr = new Student[allMyStudents.length+1];
-        for (int i = 0; i < allMyStudents.length; i++) {
-            studArr[i] = allMyStudents[i];
+        if(allMyStudents.containsKey(studentToAdd.getId())){
+            throw new RuntimeException("Student " + studentToAdd.getId() +" already exists. ");
         }
-        studArr[allMyStudents.length] = studentToAdd;
-        allMyStudents = studArr;
+        allMyStudents.put(studentToAdd.getId(), studentToAdd);
     }
+
 
 
     public void remove(String removeId) {
-        if (!containsId(removeId)){
-            System.out.println("Kenn ich nicht");
-            return;
-        }
-        Student[] studArr = new Student[allMyStudents.length-1];
-        int counter = 0;
-        for (int i = 0; i < studArr.length; i++) {
-            if (allMyStudents[i].getId().equals(removeId)){
-                counter++;
-            }
-            studArr[i] = allMyStudents[i+counter];
-        }
-        allMyStudents = studArr;
-    }
-
-    private boolean containsId(String id){
-        for (Student s : allMyStudents) {
-            if (s.getId().equals(id)) {
-                return true;
-            }
-            }
-        return false;
+        allMyStudents.remove(removeId);
     }
 }
+ */

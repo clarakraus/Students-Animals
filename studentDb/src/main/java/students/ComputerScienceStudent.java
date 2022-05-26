@@ -1,4 +1,4 @@
-package students;
+/*package students;
 
 /*
 Erstelle eine Klasse StudentDB mit folgenden Eigenschaften
@@ -21,7 +21,7 @@ Lasse zwei konkrete Klassen das Student-Interface implementieren (z.B. Informati
 Füge eine Methode zu Student hinzu, die von den zwei implementierenden Klassen verschieden implementiert werden.
 * */
 
-import java.util.UUID;
+/*import java.util.UUID;
 
 public class ComputerScienceStudent extends Student {
 
@@ -30,7 +30,9 @@ public class ComputerScienceStudent extends Student {
     }
 
     @Override
-    public String examinate() {
+    public String subject() {
         return "programming";
     }
 }
+
+ */
